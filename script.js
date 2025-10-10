@@ -20,7 +20,7 @@ function aboutBlank(url, type) {
       iframe.style.margin = '0';
       iframe.src = url;
       win.document.body.appendChild(iframe);
-      win.document.title = "IXL | Math, Language Arts, Science, Social Studies, and Spanish"
+      win.document.title = "Classroom Google CLassroom"
       var link = win.document.querySelector("link[rel~='icon']");
       if(!link) {
         link = win.document.createElement('link');
@@ -64,7 +64,7 @@ function init() {
 str = window.location.href;
 mainpage = (str.substring(0, str.lastIndexOf("/"))) + '/main.html';
 aboutBlank(mainpage, "embed");
-replace('https://ixl.com');
+replace('https://classroom.google.com/');
 }
 
 // Function to toggle fullscreen mode
@@ -87,6 +87,6 @@ document.onkeydown=(e)=>{
 	switch(e.key) {
 		case pnckey:e.preventDefault();
 		e.stopPropagation();
-		replace('https://ixl.com');
+		replace('https://classroom.google.com/');
 	}
 }
